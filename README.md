@@ -28,4 +28,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Contemplaciones
 
 - Debido al tiempo que pude dedicarle, prioricé las funcionalidades más importantes y que reflejan mis skills, por lo mismo no atendí el tema de lazy loading, los filtros o los test.
+- No he implementado la persistencia de la watch list por tiempo, pero sigo trabajando en ella, usando el localStorage como sustituto de un servicio al cual hacer un POST. 
 - Debido a la naturaleza del proyecto no consideré necesario usar un manejador de estados como Redux.
