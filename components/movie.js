@@ -1,5 +1,6 @@
 import Styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const MovieStyled = Styled.div`
     color: white;
@@ -68,10 +69,9 @@ const Movie = ({
       layout='fill'
       objectFit='contain'
     />
-    <div className='movie-content'>
+    <div className='movie-content' >
       <div className='movie-text'>
         <div className='like' onClick={() => handleLiked(movie.imdbID)}>
-          {console.log(movie)}
           {
             movie.liked ? (
               <Image
@@ -91,14 +91,16 @@ const Movie = ({
           }
 
         </div>
-        <div className='play'>
-          <Image
-            src="/play3.png"
-            alt="Picture of the author"
-            width={100}
-            height={100}
-          />
-        </div>
+        <Link href={`/detail/${movie.imdbID}`}>
+          <div className='play'>
+            <Image
+              src="/play3.png"
+              alt="Picture of the author"
+              width={100}
+              height={100}
+            />
+          </div>
+        </Link>
         <span className='title'>{movie.Title}</span>
       </div>
     </div>

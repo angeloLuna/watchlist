@@ -22,12 +22,6 @@ const HomeStyled = Styled.div`
       text-decoration: underline;
       cursor: pointer;
     }
-    .signature {
-      position: absolute;
-      color: white;
-      bottom: 3rem;
-      left: 4rem;
-    }
     .subtitle {
       font-size: 18px;
     }
@@ -36,7 +30,7 @@ const HomeStyled = Styled.div`
       border-bottom: 1px solid gray;
     }
     .movies {
-      margin-top: 3rem;
+      margin: 3rem 0;
     }
 `
 

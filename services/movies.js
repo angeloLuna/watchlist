@@ -6,6 +6,12 @@ const fetchMovie = async () => {
     return response
 }
 
+const fetchMovieById =  async (id) => {
+    const response = await axios.get(`${BASE_URL}/?i=${id}&plot=full&apikey=fdf94f87`)
+    return response
+}
+
 export {
     fetchMovie,
+    fetchMovieById,
 }

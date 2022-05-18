@@ -8,6 +8,7 @@ import { fetchMovie } from '../services/movies'
 
 
 const Home = () => {
+
   const [movies, setMovies] = useState([])
   const [likedIds, setLikedIds] = useState([])
   const [watchList, setWatchlist] = useState([])
@@ -30,7 +31,6 @@ const Home = () => {
     const arr = movies.slice()
     const list = arr.filter((item) => likedIds.includes(item.imdbID))
     setWatchlist(list)
-    console.log("watchlist", list)
   }
   const handleChangeIcon = () => {
     const arr = movies.slice()
