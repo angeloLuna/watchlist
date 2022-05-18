@@ -54,11 +54,13 @@ const MovieStyled = Styled.div`
 `
 
 const Movie = ({
-  movie
+  movie,
+  liked,
+  handleLiked,
 }) => (
   <MovieStyled>
     {
-      console.log(movie)
+      // console.log(movie)
     }
     <Image
       src={movie.Poster}
@@ -68,13 +70,26 @@ const Movie = ({
     />
     <div className='movie-content'>
       <div className='movie-text'>
-        <div className='like'>
-          <Image
-            src="/h.png"
-            alt="Picture of the author"
-            width={30}
-            height={30}
-          />
+        <div className='like' onClick={() => handleLiked(movie.imdbID)}>
+          {console.log(movie)}
+          {
+            movie.liked ? (
+              <Image
+                src="/h.png"
+                alt="Picture of the author"
+                width={30}
+                height={30}
+              />
+            ) : (
+              <Image
+                src="/h1.png"
+                alt="Picture of the author"
+                width={30}
+                height={30}
+              />
+            )
+          }
+
         </div>
         <div className='play'>
           <Image
